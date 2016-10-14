@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="969.0" style="-fx-background-color: #373a3a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
    <children>
       <Canvas fx:id="canvas" height="615.0" layoutX="1.0" layoutY="26.0" width="969.0" />
@@ -71,8 +76,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <TextField fx:id="textField_xName" layoutX="417.0" layoutY="62.0" />
-      <TextField fx:id="textField_oName" layoutX="417.0" layoutY="113.0" />
+      <TextField fx:id="textField_xName" layoutX="417.0" layoutY="62.0" text="Player1" />
+      <TextField fx:id="textField_oName" layoutX="417.0" layoutY="113.0" text="Player2" />
       <Label layoutX="332.0" layoutY="63.0" text="Player 1: " textFill="WHITE">
          <font>
             <Font name="David" size="17.0" />
@@ -81,6 +86,29 @@
       <Label layoutX="332.0" layoutY="114.0" text="Player 2: " textFill="WHITE">
          <font>
             <Font name="David" size="17.0" />
+         </font>
+      </Label>
+      <Button onAction="#onSaveClick" layoutX="283.0" layoutY="604.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="417.0" style="-fx-background-color: #080808;" text="Save Score">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#599b9c" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="David" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="player1_Label" layoutX="585.0" layoutY="54.0" prefHeight="37.0" prefWidth="66.0" text="Wins: 0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="player2_Label" layoutX="585.0" layoutY="108.0" prefHeight="31.0" prefWidth="66.0" text="Wins: 0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
          </font>
       </Label>
    </children>
