@@ -13,13 +13,6 @@ public class Rules {
     private int player2_Score;
     private boolean player_Turn = false;
 
-//trenger ikke å bruke det enda
-    @Deprecated
-    private boolean player1_win = false;
-
-//trenger ikke å bruke enda
-    @Deprecated
-    private boolean player2_win = false;
 
     public Rules(Button button1, Button button2, Button button3, Button button4, Button button5, Button button6,
                     Button button7, Button button8, Button button9){
@@ -43,70 +36,50 @@ public class Rules {
         return player2_Score;
     }
 
-    public boolean getPlayerTurn(){
-
-        return player_Turn;
-    }
 
     public void gameRules(AlertClass alert){
 
         //if player = (X)
         //horisontal retning
         if (button1.getText().equals("X") && button2.getText().equals("X") && button3.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }
 
         if (button4.getText().equals("X") && button5.getText().equals("X") && button6.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }
 
         if (button7.getText().equals("X") && button8.getText().equals("X") && button9.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }//horisontal retning slutter her
 
         //vertikal retning starter her
         if (button1.getText().equals("X") && button4.getText().equals("X") && button7.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }
 
         if (button2.getText().equals("X") && button5.getText().equals("X") && button8.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }
 
         if (button3.getText().equals("X") && button6.getText().equals("X") && button9.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }//vertikal retning slutter her
 
         //skrå retninger starter her
         if (button1.getText().equals("X") && button5.getText().equals("X") && button9.getText().equals("X")){
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }
 
         if (button3.getText().equals("X") && button5.getText().equals("X") && button7.getText().equals("X")) {
-            player1_win = true;
             player1_Score++;
-            player2_win = false;
             alert.player_X_Won(this);
         }//skrå retning slutter her
 
@@ -114,60 +87,44 @@ public class Rules {
 
         //horisontal retning
         if (button1.getText().equals("O") && button2.getText().equals("O") && button3.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }
 
         if (button4.getText().equals("O") && button5.getText().equals("O") && button6.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }
 
         if (button7.getText().equals("O") && button8.getText().equals("O") && button9.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }//horisontal retning slutter her
 
         //vertikal retning starter her
         if (button1.getText().equals("O") && button4.getText().equals("O") && button7.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }
 
         if (button2.getText().equals("O") && button5.getText().equals("O") && button8.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }
 
         if (button3.getText().equals("O") && button6.getText().equals("O") && button9.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }//vertikal retning slutter her
 
         //skrå retninger starter her
         if (button1.getText().equals("O") && button5.getText().equals("O") && button9.getText().equals("O")){
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }
 
         if (button3.getText().equals("O") && button5.getText().equals("O") && button7.getText().equals("O")) {
-            player2_win = true;
             player2_Score++;
-            player1_win = false;
             alert.player_O_Won(this);
         }//skrå retning slutter her
     }

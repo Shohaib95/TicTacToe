@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -121,5 +120,20 @@ public class MainController implements Initializable {
     public void onSaveClick(ActionEvent actionEvent) {
 
         fileHandler.saveScoreToFile(rules);
+    }
+
+    public void onCloseClick(ActionEvent actionEvent) {
+
+        System.exit(0);
+    }
+
+    public void onRestartClick(ActionEvent actionEvent) {
+
+        rules.getRefresh();
+    }
+
+    public void onAboutClick(ActionEvent actionEvent) {
+
+        AlertClass.getAboutText();
     }
 }

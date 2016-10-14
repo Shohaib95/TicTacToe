@@ -43,4 +43,12 @@ public class AlertClass {
         alert.showAndWait();
     }
 
+    public static void getAboutText(){
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("About");
+        alert.setContentText("This TicTacToe is made by Shohaib");
+        alert.show();
+    }
+
 }

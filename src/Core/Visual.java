@@ -32,13 +32,6 @@ public class Visual {
         this.textField_oName = textField_oName;
     }
 
-    public TextField getTextField_xName(){
-        return textField_xName;
-    }
-
-    public TextField getTextField_oName(){
-        return textField_oName;
-    }
 
     public void resetCanvas(){
 
